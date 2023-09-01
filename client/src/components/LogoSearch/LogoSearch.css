@@ -1,0 +1,45 @@
+.LogoSearch {
+  /* Flexbox container for logo and search */
+  display: flex;
+  gap: 0.75rem;
+  align-items: center; /* This will align the logo and text horizontally */
+}
+
+.Search {
+  /* Flexbox container styling for the search input */
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.Search>input {
+  /* Style for the search input field */
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.s-icon {
+  /* Styling for the search icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color:#1d1f2d;
+}
+
+.s-icon:hover {
+  /* Cursor style for hover over the search icon */
+  cursor: pointer;
+}
+
+.logoImage {
+  width: 40px;
+  height: auto;
+}
+
+.Webname h2 { 
+  color: white; 
+  margin-bottom: 1rem;
+}

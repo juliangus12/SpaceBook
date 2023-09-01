@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      height: 100vh;
+      width: 100vw;
+    }
+  </style>
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <canvas id="starCanvas"></canvas>
+  <div id="root"></div>
+  
+  <script>
+    const canvas = document.getElementById('starCanvas');
+    const ctx = canvas.getContext('2d');
+    const stars = [];
+    const numStars = 600;
+    const focalLength = canvas.width;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    function Star() {
+      this.x = Math.random() * canvas.width - canvas.width / 2;
+      this.y = Math.random() * canvas.height - canvas.height / 2;
+      this.z = Math.random() * canvas.width;
+
+      this.move = function() {
+        this.z -= 1;
+        if (this.z <= 0) {
+          this.z = canvas.width;
+          this.x = Math.random() * canvas.width - canvas.width / 2;
+          this.y = Math.random() * canvas.height - canvas.height / 2;
+        }
+      }
+
+      this.show = function() {
+        let x = (this.x * (focalLength / this.z)) + canvas.width / 2;
+        let y = (this.y * (focalLength / this.z)) + canvas.height / 2;
+        let size = 1 * (focalLength / this.z);
+        ctx.fillStyle = "white";
+        ctx.fillRect(x, y, size, size);
+      }
+    }
+
+    for (let i = 0; i < numStars; i++) {
+      stars.push(new Star());
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      ctx.fillStyle = '#1d1f2d';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      for (let star of stars) {
+        star.move();
+        star.show();
+      }
+    }
+
+    animate();
+  </script>
+</body>
+
+</html>

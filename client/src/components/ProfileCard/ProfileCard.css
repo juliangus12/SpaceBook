@@ -1,0 +1,108 @@
+/* Styling for the overall profile card container */
+.ProfileCard{
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    overflow-x: clip;
+    background:#f3f3f3;
+}
+
+/* Styling for the container holding the profile and cover images */
+.ProfileImages{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for the cover image */
+.ProfileImages>img:nth-of-type(1){
+    width: 100%;
+}
+
+/* Styling for the profile image with a circular design */
+.ProfileImages > img:nth-of-type(2) {
+  width: 6rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -3rem;
+  box-shadow: var(--profileShadow);
+}
+
+/* Styling for the user's name and title/position */
+.ProfileName{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 10px;
+}
+
+/* Bold styling for the main name */
+.ProfileName>span:nth-of-type(1)
+{
+    color: black;
+    font-weight: bold;
+}
+
+
+.followStatus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  /* Styling for horizontal separators in follow status */
+  .followStatus > hr {
+    width: 85%;
+    border: 1px solid lightgrey;
+  }
+  
+  /* Styling for each individual count section (followers, followings, posts) */
+  .followStatus > div {
+    display: flex;
+    gap: 1rem;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Styling for the numeric count and its label (like "Followers") */
+  .follow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .follow > span:nth-of-type(1) {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .follow > span:nth-of-type(2) {
+    color: black;
+    font-size: 13px;
+  }
+  
+  /* Vertical divider between follow count sections */
+  .vl {
+    height: 150%;
+    border-left: 2px solid lightgray;
+  }
+
+/* Styling for "My Profile" button or label at the bottom of the card */
+  .ProfileCard>span{
+      font-weight: bold;
+      color: black;
+      align-self: center;
+      margin-bottom: 1rem;
+      cursor: pointer;
+  }

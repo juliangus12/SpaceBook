@@ -1,0 +1,29 @@
+.InfoCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: white;
+    padding: 0.5rem; /* Reduced padding */
+    border-radius: 1rem;
+    width: 90%; /* Reduced width */
+    max-height: 60vh; /* Set a maximum height */
+    overflow-y: auto; /* Add scrollbar if content exceeds max-height */
+}
+
+.infoHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.infoHead > div:hover {
+    cursor: pointer;
+}
+
+/* Styling for the logout button inside the InfoCard */
+.logout-button {
+    width: 7rem;
+    height: 2rem;
+    margin-top: 1rem;
+    align-self: flex-end;
+}

@@ -1,0 +1,8 @@
+.ProfileSide {
+    /* Flexible column layout with centered items and overflow handling */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    overflow: auto;
+}

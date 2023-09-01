@@ -1,0 +1,215 @@
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: rgba(36, 45, 73, 0.65);
+  --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #cfcdcd;
+  --cardColor: rgba(255, 255, 255, 0.64);
+  --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+  --inputColor: rgba(45, 56, 65, 0.07);
+  --photo: #4CB256;
+  --video: #4A4EB7;
+  --location: #EF5757;
+  --shedule: #E1AE4A;
+}
+
+.App {
+  overflow: hidden;
+  color: black;
+  padding: 1rem 1rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--inputColor);
+  transition: all 100ms ease-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: white;
+  background: black;
+}
+
+.button:disabled{
+  background:silver; 
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.nebula {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: transparent;
+}
+
+/* Patches to resemble colorful gases in a nebula */
+.patch1,
+.patch2,
+.patch3 {
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  filter: blur(40px);
+}
+
+.patch1 {
+  top: 5%;
+  left: 10%;
+  background: radial-gradient(circle, rgba(255, 0, 150, 0.5), transparent);
+}
+
+.patch2 {
+  bottom: 10%;
+  right: 15%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.5), transparent);
+}
+
+.patch3 {
+  top: 30%;
+  right: 20%;
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.5), transparent);
+}
+
+/* Main Nebula Container */
+.nebula2 {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  background: transparent;
+}
+
+/* Different patches to resemble colorful gases in a nebula */
+.patch4,
+.patch5,
+.patch6,
+.patch7 {
+  position: absolute;
+  filter: blur(30px);
+}
+
+/* Ellipse-shaped patch */
+.patch4 {
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 50%;
+  background: radial-gradient(ellipse, rgba(255, 100, 150, 0.6), transparent);
+}
+
+/* Circular patch */
+.patch5 {
+  top: 30%;
+  left: 20%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(100, 255, 255, 0.5), transparent);
+}
+
+/* Another ellipse-shaped patch */
+.patch6 {
+  bottom: 10%;
+  right: 20%;
+  width: 90%;
+  height: 40%;
+  background: radial-gradient(ellipse, rgba(255, 200, 0, 0.4), transparent);
+}
+
+/* Smaller circular patch */
+.patch7 {
+  bottom: 40%;
+  right: 10%;
+  width: 30%;
+  height: 30%;
+  background: radial-gradient(circle, rgba(150, 0, 255, 0.6), transparent);
+}
+
+/* Animation for breathing effect on nebula gases */
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+.patch1,
+.patch2,
+.patch3 {
+  animation: breathe 5s infinite alternate;
+  animation-delay: 0s;
+  /* initial delay */
+}
+
+.patch4,
+.patch5,
+.patch6,
+.patch7 {
+  animation: breathe 5s infinite alternate;
+  animation-delay: 2s;
+  /* delay to make it different from the first nebula */
+}
+
+/* The comet's tail */
+.comet-tail {
+  width: 150px;
+  /* Control the length of the tail */
+  height: 15px;
+  /* Control the thickness of the tail */
+  background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.8));
+  /* Gradient for fading effect */
+  position: absolute;
+  transform: rotate(-45deg);
+  /* Adjust rotation */
+  border-radius: 7.5px;
+  /* Making the tail edges smoother */
+}
+
+/* 
+   Styles for animating the comet tail:
+   - The tail is rotated 45 degrees to point downwards.
+   - An animation simulates a pulsing motion to give the comet a moving effect.
+*/
+
+@keyframes cometGlow {
+  0% {
+    transform: scaleX(1) rotate(45deg);
+    filter: brightness(100%);
+  }
+
+  50% {
+    transform: scaleX(1.2) rotate(45deg);
+    /* stretch the tail slightly */
+    filter: brightness(120%);
+  }
+
+  100% {
+    transform: scaleX(1) rotate(45deg);
+    filter: brightness(100%);
+  }
+}
+
+.comet-tail {
+  transform: rotate(45deg);
+  /* initial rotation */
+  animation: cometGlow 3s infinite alternate;
+}
