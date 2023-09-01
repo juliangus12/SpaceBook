@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/SpaceBook/static/css/main.a5e30c54.css",
+    "main.js": "/SpaceBook/static/js/main.769f2c53.js",
+    "static/media/profileImg.jpg": "/SpaceBook/static/media/profileImg.e857f45860a47d11abdd.jpg",
+    "index.html": "/SpaceBook/index.html",
+    "main.a5e30c54.css.map": "/SpaceBook/static/css/main.a5e30c54.css.map",
+    "main.769f2c53.js.map": "/SpaceBook/static/js/main.769f2c53.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5e30c54.css",
+    "static/js/main.769f2c53.js"
+  ]
+}
