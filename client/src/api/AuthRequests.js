@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API = axios.create({ baseURL: 'https://sbserver-6320da4ec570.herokuapp.com/' });
+const API = axios.create({ baseURL: 'http://localhost:5000' });
 
 export const logIn= (formData)=> API.post('/auth/login',formData);
 
