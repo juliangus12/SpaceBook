@@ -15,7 +15,9 @@ const app = express();
 // middleware
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: 'https://bespoke-melba-d43765.netlify.app'
+}));
 
 // to serve images inside public folder
 app.use(express.static('public')); 
