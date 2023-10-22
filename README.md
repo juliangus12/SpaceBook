@@ -52,7 +52,3 @@ To populate the database with the sample user data:
    ```
 
 After executing the script, verify the user data by checking the database collections. You should see the newly created users.
-
----
-
-I hope this version of the README provides a clearer and more professional overview of your project and its setup. If you have any additional information or changes you'd like to include, please let me know!
