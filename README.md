@@ -2,53 +2,19 @@
 
 SpaceBook is a full-stack MERN application that allows users to interact in a social media-like environment.
 
-## Getting Started
+## Getting Starte
 
-### Prerequisites
+cd SpaceBook
+chmod +x setup_spacebook.sh
+sudo ./setup_spacebook.sh
 
-- Node.js
-- Yarn (for the client)
-- MongoDB
+## General GUI Features 
+Creating Accounts
+Loging in and loging out 
+JWT to resume previous sessions 
+Follow and unfollow users 
+Followed users' posts appear in feed
+Users can like and comment on posts
+Users can edit their profile bio and pictures 
 
-### Running the Application
-
-1. **Start the Client**:
-   ```bash
-   cd client
-   yarn start
-   ```
-
-2. **Start the Server**:
-   ```bash
-   cd server
-   npm start
-   ```
-
-By following the above steps, both the client and server should be up and running.
-
-### Database Configuration
-
-1. Create a `.env` file inside the `server` directory with the following configurations:
-   ```env
-   PORT=5000
-   MONGODB_CONNECTION="Your MongoDB connection URL here"
-   JWTKEY="MERN"
-   ```
-
-2. Create another `.env` file inside the `client` directory with the following:
-   ```env
-   REACT_APP_PUBLIC_FOLDER=http://localhost:5000/images/
-   ```
-
-### Loading Sample User Data
-
-To populate the database with the sample user data:
-
-1. Download the required JSON data.
-2. Update the path to the JSON file in the `loadJson.js` script.
-3. Run the script using:
-   ```bash
-   node loadJson.js
-   ```
-
-After executing the script, verify the user data by checking the database collections. You should see the newly created users.
+DALI member data loaded from provided json file 
