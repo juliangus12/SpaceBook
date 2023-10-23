@@ -2,7 +2,7 @@
 
 SpaceBook is a full-stack MERN application that allows users to interact in a social media-like environment.
 
-## Getting Starte
+## Getting Started
 
 cd SpaceBook
 chmod +x setup_spacebook.sh
