@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Change ownership permissions of all files and directories to 777
-chmod -R 777 .
+sudo chmod -R 777 .
 
 # Install dependencies for the client
 cd client
-yarn add react-scripts
+sudo yarn add react-scripts
 
 # Install dependencies for the server
 cd ../server
