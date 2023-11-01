@@ -4,11 +4,13 @@ SpaceBook is a full-stack MERN application that allows users to interact in a so
 
 ## Getting Started
 
+sudo chmod 777 -R SpaceBook 
+
 cd SpaceBook
 
-chmod +x setup_spacebook.sh
+sudo chmod +x setup_spacebook.sh
 
-sudo ./setup_spacebook.sh
+./setup_spacebook.sh
 
 ## General GUI Features 
 Creating Accounts
