@@ -12,11 +12,17 @@ sudo ./setup_spacebook.sh
 
 ## General GUI Features 
 Creating Accounts
+
 Loging in and loging out 
+
 JWT to resume previous sessions 
+
 Follow and unfollow users 
+
 Followed users' posts appear in feed
+
 Users can like and comment on posts
+
 Users can edit their profile bio and pictures 
 
 DALI member data loaded from provided json file 
