@@ -1,20 +1,30 @@
 #!/bin/bash
 
-# Change ownership permissions of all files and directories to 777
-sudo chmod -R 777 .
+# Exit script if any command fails
+set -e
+
+# Navigate to the project's root directory
+cd "$(dirname "$0")"
 
 # Install dependencies for the client
+echo "Installing client dependencies..."
 cd client
-sudo yarn add react-scripts
+yarn install
+cd ..
 
 # Install dependencies for the server
-cd ../server
-npm install express
-npm install
+echo "Installing server dependencies..."
+cd server
+yarn install
+cd ..
 
 # Start the server in the background
-npm start &
+echo "Starting the server..."
+cd server
+yarn start &
+cd ..
 
-# Change back to the client directory and start the client
-cd ../client
+# Start the client
+echo "Starting the client..."
+cd client
 yarn start
