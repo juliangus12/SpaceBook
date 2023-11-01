@@ -21,7 +21,7 @@ cd ..
 # Start the server in the background
 echo "Starting the server..."
 cd server
-yarn start &
+npm start &
 cd ..
 
 # Start the client
