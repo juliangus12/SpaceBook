@@ -28,3 +28,5 @@ Users can like and comment on posts
 Users can edit their profile bio and pictures 
 
 DALI member data loaded from provided json file 
+
+Video Demo: https://youtu.be/VNrxe77ougg
