@@ -19,7 +19,7 @@ Loging in and loging out
 
 JWT to resume previous sessions 
 
-Follow and unfollow users 
+Follow and unfollow users  
 
 Followed users' posts appear in feed
 
